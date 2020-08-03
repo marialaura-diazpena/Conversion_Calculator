@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conversion Calculator</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <header>
+
+            <h1>Conversion Calculator</h1>
+            
+        </header>
+
+
+            <div class="selection">
+                <select name="unitSwitch" id="unitSwitch" onchange="changeUnitSystem(this.value);">
+                    <option value="zero">Select an option</option>
+                    <option value="length">Length</option>
+                    <option value="weight">Weight</option>
+                    <option value="area">Area</option>
+                    <option value="volume">Volume</option>
+                </select>
+            
+
+
+        <section class="length" disabled="true" id="length_section">
+        <div class="imperial_length">
+           
+            <div>
+                <p>Inches</p>
+                <input type="number" name="inches" id="inches" onchange="convertFromInches(this.value)" value="0" placeholder="5" class="imperial">
+            </div>
+
+            <div>
+                <p>Feet</p>
+                <input type="number" name="feet" id="feet" onchange="convertFromFeet(this.value)" value="0" placeholder="5" class="imperial">
+            </div>
+
+            <div>
+                <p>Miles</p>
+                <input type="number" name="miles" id="miles" onchange="convertFromMiles(this.value)" value="0" placeholder="5" class="imperial">
+            </div>
+        </div>
+        <div class="metric_length">
+
+            <div>
+                <p>Centimeters</p>
+                <input type="number" value="0" id="centimeters" onchange="convertFromCentimeters(this.value)" value="0" placeholder="5" class="metric">
+            </div>
+
+            <div>
+                <p>Meters</p>
+                <input type="number" value="0" id="meters" onchange="convertFromMeters(this.value)" value="0" placeholder="5" class="metric">
+            </div>
+
+            <div>
+                <p>Kilometers</p>
+                <input type="number" value="0" id="kilometers" onchange="convertFromKilometers(this.value)" value="0" placeholder="5" class="metric">
+            </div>
+        </div>
+        </section>
+        
+        <section class="weight" disabled="true" id="weight_section">
+            <div class="imperial_weight">
+                <div>
+                    <p>Ounce</p>
+                    <input type="number" value="0" id="ounce" onchange="convertFromOunce(this.value)" value="0" placeholder="5" class="imperial">
+                </div>
+    
+                <div>
+                    <p>Pound</p>
+                    <input type="number" value="0" id="pound" onchange="convertFromPound(this.value)" value="0" placeholder="5" class="imperial">
+                </div>
+    
+            </div>
+            <div class="metric_weight">
+                <div>
+                    <p>Grams</p>
+                    <input type="number" value="0" id="grams" onchange="convertFromGrams(this.value)" value="0" placeholder="5" class="metric">
+                </div>
+    
+                <div>
+                    <p>Kilograms</p>
+                    <input type="number" value="0" id="kilograms" onchange="convertFromKilograms(this.value)" value="0" placeholder="5" class="metric">
+                </div>
+
+            </div>
+
+        </section>
+    
+        <section class="area" disabled="true" id="area_section">
+            <div class="imperial_area">
+            
+            <div>
+                <p>Square Feet</p>
+                <input type="number" name="sqFeet" id="sqFeet" onchange="convertFromSqFeet(this.value)" value="0" placeholder="5" class="imperial">
+            </div>
+
+            <div>
+                <p>Square Miles</p>
+                <input type="number" name="sqMiles" id="sqMiles" onchange="convertFromSqMiles(this.value)" value="0" placeholder="5" class="imperial">
+            </div>
+            </div>
+
+            <div class="metric_area">
+                
+            <div>
+                <p>Square Meters</p>
+                <input type="number" value="0" id="sqM" onchange="convertFromSqMeters(this.value)" value="0" placeholder="5" class="metric">
+            </div>
+
+            <div>
+                <p>Square Kilometers</p>
+                <input type="number" value="0" id="sqKm" onchange="convertFromSqKilometers(this.value)" value="0" placeholder="5" class="metric">
+            </div>
+        </div>
+        </section>
+
+        <section class="volume" disabled="true" id="volume_section">
+            <div class="imperial_volume">
+                <div>
+                <p>Fluid Ounce</p>
+                <input type="number" value="0" id="flOz" onchange="convertFromFluidOunce(this.value)" value="0" placeholder="5" class="imperial">
+                </div>
+                
+    
+                <div>
+                <p>Cup</p>
+                <input type="number" value="0" id="cup" onchange="convertFromCup(this.value)" value="0" placeholder="5" class="imperial">
+                </div>
+    
+                <div>
+                    <p>Gallon</p>
+                    <input type="number" value="0" id="gallon" onchange="convertFromGallon(this.value)" value="0" placeholder="5" class="imperial">
+                </div>
+            </div>
+            <div class="metric_volume">
+                <div>
+                <p>Milliliters</p>
+                <input type="number" value="0" id="milliliters" onchange="convertFromMilliliters(this.value)" value="0" placeholder="5" class="metric">
+                </div>
+                
+    
+                <div>
+                <p>Liters</p>
+                <input type="number" value="0" id="liters" onchange="convertFromLiters(this.value)" value="0" placeholder="5" class="metric">
+                </div>
+
+            </div>
+        </div>
+
+        </section>
+
+        <script type="text/javascript" src="assets/scripts/conversion.js"></script>
+    </body>
+</html>
